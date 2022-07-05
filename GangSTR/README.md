@@ -1,4 +1,4 @@
-1. file directories 
+1. File directories 
 
 --/GangSTR
     |--scripts
@@ -11,8 +11,7 @@
 	     |--${SAMPLE}
 		    |--${SAMPLE}.vcf.gz
 		    |--${SAMPLE}_slurm_${JOBID}.out
-		    | \
 
-Note: sample 32-UO_080C_150813_L003 from TrypanoGEN failed due to Not enough reads
+2. Note: sample 32-UO_080C_150813_L003 from TrypanoGEN failed due to Not enough reads
 
 all_samples_vcf_dir.txt contains directories of vcf files from 559 samples (left 1 sample from trypanoGEN due to low coverage), then merged with mergeSTR
