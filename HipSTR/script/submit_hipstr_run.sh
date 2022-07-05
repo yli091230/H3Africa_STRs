@@ -1,20 +1,39 @@
 #!/usr/bin/bash
 
+
 SAMPLE=$1
 RESULT=/scratch3/users/yal084/STR_Call/HipSTR/result/H3A_Baylor
 SUCCEED_RUN=$(cat ${RESULT}/succeed_run.txt)
-
+REF_dir=/scratch3/users/yal084/STR_Call/HipSTR/files_for_run
+str_ref_dir=/scratch3/users/yal084/STR_Call/HipSTR/files_for_run/STR_${SAMPLE}_ref.bed
+STR_num=$(cat ${str_ref_dir} | wc -l)
 SUBMISSION_LOG=$(date '+%Y-%m-%d')
 
-if echo ${SUCCEED_RUN} | grep -w ${SAMPLE} > /dev/null;
-then
-	echo "${SAMPLE} already analyzed"
-	continue
-else
-	mkdir -p ${RESULT}/${SAMPLE}
-	echo "Submitting Job ${SAMPLE}"
-	sbatch --job-name=${SAMPLE} \
-	       --output=${RESULT}/${SAMPLE}/${SAMPLE}_slurm_%j.out \
-	       /scratch3/users/yal084/STR_Call/HipSTR/script/run_hipstr.slurm ${SAMPLE}
-	echo "${SAMPLE} submitted" >> ${RESULT}/Jobs_${SUBMISSION_LOG}.txt
-fi
+
+mkdir -p ${RESULT}/${SAMPLE}
+
+start_job()
+{
+	job_name=$(basename $1)
+	if echo ${SUCCEED_RUN} | grep -w ${job_name} > /dev/null;
+	then
+		echo "${job_name} already analyzed"
+	
+	else
+		echo "Submitting Job ${job_name}"
+		sbatch --job-name=${job_name} \
+	       	       --output=${RESULT}/${SAMPLE}/${job_name}_slurm_%j.out \
+	      	        /scratch3/users/yal084/STR_Call/HipSTR/script/run_hipstr.slurm $1
+		echo "${job_name} submitted" >> ${RESULT}/Jobs_${SUBMISSION_LOG}.txt
+	fi
+}
+
+
+
+mkdir -p ${REF_dir}/${SAMPLE}
+split -dl 26000 ${str_ref_dir} ${REF_dir}/${SAMPLE}/${SAMPLE}_ -a 2
+for splited_sample in $(ls -d ${REF_dir}/${SAMPLE}/*);
+do
+	#echo ${splited_sample}
+	start_job ${splited_sample}
+done

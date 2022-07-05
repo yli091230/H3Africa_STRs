@@ -13,10 +13,10 @@ source /software/common/anaconda3/2021.11/etc/profile.d/conda.sh
 #conda deactivate
 conda activate gangstr
 
-files=/scratch3/users/yal084/STR_Call/GangSTR/files_for_run/all_samples_vcf_dir.txt
-#files=/scratch3/users/yal084/STR_Call/GangSTR/files_for_run/H3_Baylor_vcf_dir.txt
+#files=/scratch3/users/yal084/STR_Call/GangSTR/files_for_run/all_samples_vcf_dir.txt
+files=/scratch3/users/yal084/STR_Call/GangSTR/files_for_run/H3_Baylor_vcf_dir.txt
 ##out_dir=/scratch3/users/yal084/STR_Call/GangSTR/result/merged_TrypanoGEN_gangstr
-out_dir=/scratch3/users/yal084/STR_Call/GangSTR/result/merged_all_gangstr
+out_dir=/scratch3/users/yal084/STR_Call/GangSTR/result/merged_H3A_Baylor_gangstr
 file_list=$(cat ${files})
 
 mergeSTR \
