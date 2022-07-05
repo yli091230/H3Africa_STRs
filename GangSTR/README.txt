@@ -8,9 +8,9 @@
 		|--H3Africa_Baylor 
 			|--succeed_run.txt 
 			|--failed_run.txt 
-			|--${SAMPLE} 
-				|--${SAMPLE}.vcf.gz
-				|--${SAMPLE}_slurm_${JOBID}.out
+			|--SAMPLE 
+				|--SAMPLE.vcf.gz
+				|--SAMPLE_slurm_JOBID.out
 
 
 2. Note: sample 32-UO_080C_150813_L003 from TrypanoGEN failed due to Not enough reads
