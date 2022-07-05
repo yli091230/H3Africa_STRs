@@ -17,7 +17,7 @@ conda activate gangstr
 FILE_NAME=$1
 FILE_DIR=/scratch3/users/yal084/STR_Call/GangSTR/result
 
-time bcftools sort ${FILE_DIR}/${FILE_NAME}.vcf -o ${FILE_DIR}/${FILE_NAME}.sorted \
+time bcftools sort ${FILE_DIR}/${FILE_NAME}.vcf -o ${FILE_DIR}/${FILE_NAME}.sorted -T ${FILE_DIR} \
 && rm ${FILE_DIR}/${FILE_NAME}.vcf \
 && mv ${FILE_DIR}/${FILE_NAME}.sorted ${FILE_DIR}/${FILE_NAME}.vcf \
 && bgzip ${FILE_DIR}/${FILE_NAME}.vcf \
