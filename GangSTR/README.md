@@ -1,6 +1,6 @@
-## File structure \
+1. file directories 
 
-./GangSTR
+/GangSTR
     |--scripts
     |--files_for_run
     |--results
