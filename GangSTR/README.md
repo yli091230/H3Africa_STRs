@@ -1,6 +1,6 @@
 1. File directories 
 
---/GangSTR \
+--/GangSTR
     |--scripts
     |--files_for_run
     |--results
