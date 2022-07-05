@@ -1,4 +1,4 @@
-## File structure
+## File structure \
 
 ./GangSTR
     |--scripts
