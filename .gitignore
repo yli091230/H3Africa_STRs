@@ -4,3 +4,5 @@ HipSTR/result/
 #all splited STR ref files
 HipSTR/files_for_run/STR_*_ref.bed
 HipSTR/files_for_run/chr*/
+#additional files, e.g Segmental Duplication regions
+/additional_files/
