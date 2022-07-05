@@ -1,6 +1,6 @@
 1. file directories 
 
-/GangSTR
+--/GangSTR
     |--scripts
     |--files_for_run
     |--results
@@ -11,7 +11,7 @@
 	     |--${SAMPLE}
 		    |--${SAMPLE}.vcf.gz
 		    |--${SAMPLE}_slurm_${JOBID}.out
-		    |
+		    | \
 
 Note: sample 32-UO_080C_150813_L003 from TrypanoGEN failed due to Not enough reads
 
