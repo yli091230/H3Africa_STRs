@@ -24,5 +24,4 @@ time bcftools sort ${FILE_DIR}/${FILE_NAME}.vcf -o ${FILE_DIR}/${FILE_NAME}.sort
 && bgzip ${FILE_DIR}/${FILE_NAME}.vcf \
 && tabix -p vcf ${FILE_DIR}/${FILE_NAME}.vcf.gz
 	
-
-
+echo "Job ${SLURM_JOB_ID} done"
