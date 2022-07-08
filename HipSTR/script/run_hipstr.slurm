@@ -16,14 +16,15 @@ conda activate gangstr
 
 str_ref_dir=$1
 file_id=$(basename ${str_ref_dir})
-sample=$(echo ${file_id} | cut -d '_' -f 1)
+#sample=$(echo ${file_id} | cut -d '_' -f 1)
 #str_ref_dir=/scratch3/users/yal084/STR_Call/HipSTR/files_for_run/STR_${file_id}_ref.bed
 ref_dir=/cbio/dbs/references/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa
-HipSTR=/scratch3/users/yal084/tools/HipSTR
+HipSTR=/scratch3/users/yal084/tools/HipSTR_07
+#HipSTR=/scratch3/users/yal084/tools/HipSTR
 cram_file_dir=/scratch3/users/yal084/STR_Call/HipSTR/files_for_run/Baylor_cram_dir_list.txt
 cram_list=$(cat ${cram_file_dir})
 #echo ${cram_list}
-result=/scratch3/users/yal084/STR_Call/HipSTR/result/H3A_Baylor/${sample}
+result=/scratch3/users/yal084/STR_Call/HipSTR/result/H3A_Baylor/${file_id}
 echo ${str_ref_dir}
 
 die()
