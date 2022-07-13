@@ -12,7 +12,7 @@ source /software/common/anaconda3/2021.11/etc/profile.d/conda.sh
 #eval "$(conda shell.bash hook)"
 #conda deactivate 
 conda activate gangstr
-export TMPDIR=/scratch/users/yal084/${SLURM_JOB_ID}
+export TMPDIR=/scratch3/users/yal084/${SLURM_JOB_ID}
 echo ${SLURM_JOB_ID}
 
 FILE_NAME=$1
