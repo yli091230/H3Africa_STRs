@@ -7,3 +7,5 @@ HipSTR/files_for_run/chr*/
 HipSTR/files_for_run/hipref_*
 #additional files, e.g Segmental Duplication regions
 /additional_files/
+#H3A_Baylor sample name and country info
+H3A_Baylor_sample_country.txt
