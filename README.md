@@ -25,4 +25,4 @@ rypanGen study (EGAS00001002602) sequenced on Illumina HiSeq 2500
           |    |--TrypanoGEN
           |--scripts 
 ```
-4. CODIS U.S genotypes were download from [NIST] (https://strbase.nist.gov/fbicore.htm) [population dataset] (https://strbase.nist.gov/NISTpop.htm) and regions of CODIS for hg38 was download from UCSC genomebrowser. 
+4. CODIS U.S genotypes were download from [NIST](https://strbase.nist.gov/fbicore.htm) [population dataset](https://strbase.nist.gov/NISTpop.htm) and regions of CODIS for hg38 was download from UCSC genomebrowser. 
