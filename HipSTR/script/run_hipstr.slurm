@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --time=180:00:00
-#SBATCH --mem=16G
+#SBATCH --mem=24G
 #SBATCH --export=ALL
 
 module purge
