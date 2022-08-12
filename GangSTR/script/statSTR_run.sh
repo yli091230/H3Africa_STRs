@@ -25,7 +25,7 @@ time statSTR \
 	--vcftype gangstr \
 	--thresh --afreq --acount --hwep --het \
 	--mean --mode --var --numcalled \
-	2>> ${out_dir}.error
+	2>> ${out_dir}.error \
 	1> ${out_dir}.out
 echo "stats job done!"
 
