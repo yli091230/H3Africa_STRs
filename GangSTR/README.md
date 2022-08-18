@@ -24,4 +24,6 @@ all_samples_vcf_dir.txt contains directories of vcf files from 559 samples (left
 	2. STR genotypes that pass dumpSTR filters ./H3A_Baylor_merged/merged_H3A_Baylor_gangstr_filtered_GT.tsv
 	3. filtered STRs used for PCA, H3A_Baylor_gangstr_GT_for_PCA.tsv
 * Realize mergeSTR will produce duplicated STRs that partially overlaps, need to remove those STRs.
-4. 1000 Genome data is located in ./results/1000Genomes 
+4. 1000 Genome data is located in ./results/1000Genomes
+* The GangSTR call include  3202 samples, 2309 of those are from non African population, which are used for the comaprison of STR frequency with H3Africa_Baylor, command for extract subset of samples `bcftools view -Oz -S Non_AFR_sample_list_no_gender.txt all_merged.sorted.vcf.gz > 1kg_non_AFR.vcf.gz`.
+	1. Run statSTR on the 2309 samples GangSTR calls. 
