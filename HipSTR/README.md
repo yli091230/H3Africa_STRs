@@ -1,5 +1,5 @@
 # Install HipSTR
-1. Download HipSTR v0.7 from https://github.com/tfwillems/HipSTR/archive/refs/tags/v0.7.tar.gz, unzip and install under your own directory. Note: The current version of the HipSTR have a small bug, will provide a link for updated version.
+1. Use the [HipSTR develop branch](https://github.com/gymrek-lab/HipSTR/tree/develop) from gymrek-lab github, this version fix a bug due to supplementary alignment. 
 2. Splict HipSTR reference file to small batches, each contains 26,000 STRs.There are 64 split files. HipSTR run for hipref_63 failed due to memory issue, this file contains STRs on ChrY, so ignore this one.
 3. Concatenate all HipSTR call to one single file using `bcftools concat -f ../../files_for_run/H3A_hipstr_file_list.txt -O z -o H3A_Baylor_combined`, where H3A_hipstr_file_list.txt is the directory for those split HipSTR call files.
 4. Running DumpSTR to filter HipSTR call result
